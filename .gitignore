@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Build directories
+dist/
+static/css/
+static/js/
+
+# Gulp cache and temporary files
+.gulp/
+.temp/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor specific
+.idea/
+.vscode/
+*.swp
+
+# Files to ignore in the source directories
+src/scss/*.css.map
+src/pug/*.html
+
+# Misc
+*.bak
+*.tmp
+*.lock
