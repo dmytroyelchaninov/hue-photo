@@ -2,61 +2,40 @@ doctype html
 html(lang="en")
 
   block main_vars
-    - var css_main = ["css/style.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css", "css/login.css" ]
-    - var js_main = ["https://code.jquery.com/jquery-3.6.4.min.js", "js/burger.js", "js/login.js"]
+    - var css_main = ["css/style.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" ]
+    - var js_main = ["https://code.jquery.com/jquery-3.6.4.min.js", "js/burger.js"]
 
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width")
-    title ADMIN PANEL
-    meta(property="og:title", content="NORTHSTAR ADMIN")
-    meta(property="og:description", content="admin panel")
+    title HUE
+    meta(property="og:title", content="hue-photo")
+    meta(property="og:description", content="personal blog")
     meta(property="og:type", content="website")
 
     each css in css_main || []
       link(rel="stylesheet", href=css)
 
   body
-    .login-wrapper
-      .login-container
-        h1 Sign In
-
-        p#pleaseConfirm(style="color: red; display: None;") Please confirm your email.
-        p#invalidCredentials(style="color: red; display: None;") Invalid email or password.
-        p#errorGeneral(style="color: red; display: None;") Something went wrong.
-        
-        form#loginForm
-          .form-group
-            label(for="username") Username:
-            input#email(type="email", name="email", required, placeholder="")
-          .form-group
-            label(for="password") Password:
-            input#password(type="password", name="password", required, placeholder="")
-          button.btn#login(type="submit") Login
-
-        //- remember me
-        .form-group
-          .remember_me
-            input#rememberMe(type="checkbox", name="rememberMe")
-            label(for="rememberMe") Remember Me
 
     .wrapper
       header.header
         .container
           .header__body
-            a.header__logo(href="inventory.html")
+            a.header__logo(href="exposure.html")
               //- logo src defined in logo.js
-              img#logo(src="images/logo.svg", alt="Logo")
+              img#logo(src="images/logo.png", alt="Logo")
             .header__burger
               span.span1
               span.span2
               span.span3
             nav.header__menu
               ul.header__list
-                li: a.header__link(href="stores.html") STORES
-                li: a.header__link(href="inventory.html") INVENTORY
-                li: a.header__link(href="orders.html") ORDERS
-                li: a.header__link(href="app_purchases.html") IN-APP
+                li: a.header__link(href="index.html") HOME
+                li: a.header__link(href="exposure.html") EXPOSURE
+                li: a.header__link(href="what.html") WHAT
+                li: a.header__link(href="when.html") WHEN
+                li: a.header__link(href="where.html") WHERE
               .header__login_mobile
                 a#loginButtonMobile
                   i.far.fa-user-circle
@@ -71,8 +50,8 @@ html(lang="en")
     each js in js_main || []
       script(src=js)
 
-    footer.footer
-      .footer__body
-        .footer__text
-          p &copy; 2024 Yelchaninov
+    //- footer.footer
+    //-   .footer__body
+    //-     .footer__text
+    //-       p &copy; 2024 Yelchaninov
           

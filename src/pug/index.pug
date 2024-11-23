@@ -1,0 +1,16 @@
+extends base.pug
+
+append main_vars
+  - css_main.push.apply(css_main, ["css/gear.css"])
+  - js_main.push.apply(js_main, ["js/gear.js"])
+
+block content
+  .main-container
+    .image-container
+      img(src="images/logo_.png", alt="Logo")
+    .menu-container
+      .highlight-zone
+      ul.menu
+        each item, index in ["EXPOSURE", "WHO", "WHAT", "WHERE", "WHEN"]
+          li.menu-item(data-index=index)= item
+

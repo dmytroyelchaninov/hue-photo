@@ -106,10 +106,11 @@ body.lock {
     animation-fill-mode: forwards;
     left: 2%;
     top: 6%;
-    img {
-        max-height: $header-height * 0.9;
-        display: block;
-    }
+}
+
+#logo {
+    max-height: $header-height * 0.9;
+    display: block;
 }
 .header__burger {
     display: none;
